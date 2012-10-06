@@ -1,0 +1,12 @@
+function sm = softmaxInit(inputData, sm)
+% S. Mohsen Amiri (amiri1982@gmail.com) October 2012
+% initialize a softmax model 
+% 
+% sm = softmaxInit(inputData, sm)
+% sm is structure which contain the model parameters
+% inputData is a MxN matrix which will be used for training. It 
+
+sm.lambda = 1e-4; % Weight decay parameter
+sm.inputDim = size(inputData,1);
+sm.theta = 0.005 * randn(sm.numClasses * sm.inputDim, 1);
+end
